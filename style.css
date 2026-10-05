@@ -1,0 +1,1092 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08050c;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #ff7518;
+    color: #000;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar-halloween {
+    background: rgba(5, 3, 8, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 117, 24, 0.2);
+
+    padding: 17px 0;
+
+    position: fixed;
+
+    width: 100%;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: #ff7518 !important;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    font-size: 1.15rem;
+}
+
+.nav-link {
+    color: #d2ccd5 !important;
+
+    margin-left: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff7518 !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 2, 10, 0.65),
+            rgba(5, 2, 10, 0.9)
+        ),
+        url("imagens/halloween-1.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 10%,
+            rgba(0, 0, 0, 0.65) 75%
+        );
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    animation: aparecer 1.5s ease;
+}
+
+.badge-halloween {
+
+    color: #ff7518;
+
+    font-weight: bold;
+
+    letter-spacing: 7px;
+
+    font-size: 0.85rem;
+}
+
+.hero h1 {
+
+    font-size: clamp(3.5rem, 9vw, 8rem);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    margin: 25px 0;
+
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.9);
+}
+
+.hero h1 span {
+
+    display: block;
+
+    color: #ff7518;
+
+    text-shadow:
+        0 0 15px rgba(255, 117, 24, 0.7),
+        0 0 40px rgba(255, 117, 24, 0.3);
+}
+
+.hero p {
+
+    color: #ddd6df;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   LUA
+===================================================== */
+
+.lua {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: #eee8ca;
+
+    top: 16%;
+
+    right: 12%;
+
+    box-shadow:
+        0 0 30px rgba(255, 245, 200, 0.5),
+        0 0 80px rgba(255, 255, 255, 0.2);
+
+    animation: luaBrilho 4s infinite alternate;
+}
+
+@keyframes luaBrilho {
+
+    from {
+        box-shadow:
+            0 0 20px rgba(255, 245, 200, 0.4);
+    }
+
+    to {
+        box-shadow:
+            0 0 55px rgba(255, 245, 200, 0.8);
+    }
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.btn-halloween {
+
+    background: #ff7518;
+
+    color: #160a04;
+
+    border: none;
+
+    border-radius: 30px;
+
+    padding: 14px 28px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 20px rgba(255, 117, 24, 0.2);
+}
+
+.btn-halloween:hover {
+
+    background: #ff923d;
+
+    color: #160a04;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 35px rgba(255, 117, 24, 0.45);
+}
+
+
+/* =====================================================
+   MORCEGOS
+===================================================== */
+
+.bat {
+
+    position: absolute;
+
+    font-size: 28px;
+
+    opacity: 0.7;
+
+    z-index: 3;
+
+    animation: morcego 10s linear infinite;
+}
+
+.bat-1 {
+
+    top: 25%;
+
+    left: -60px;
+}
+
+.bat-2 {
+
+    top: 45%;
+
+    left: -80px;
+
+    animation-delay: 3s;
+
+    animation-duration: 13s;
+}
+
+.bat-3 {
+
+    top: 65%;
+
+    left: -100px;
+
+    animation-delay: 6s;
+
+    animation-duration: 11s;
+}
+
+@keyframes morcego {
+
+    0% {
+        transform: translateX(-100px) translateY(0);
+    }
+
+    50% {
+        transform: translateX(55vw) translateY(-40px);
+    }
+
+    100% {
+        transform: translateX(110vw) translateY(20px);
+    }
+}
+
+
+/* =====================================================
+   ALERT
+===================================================== */
+
+.alert-area {
+
+    position: relative;
+
+    margin-top: -35px;
+
+    z-index: 20;
+}
+
+.alert-halloween {
+
+    background: #1b0d27;
+
+    color: #eee;
+
+    border: 1px solid #6f2dbd;
+
+    border-radius: 12px;
+
+    padding: 18px 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.alert-halloween i {
+
+    color: #ff7518;
+
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.section {
+
+    padding: 110px 0;
+}
+
+.dark-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #09050d,
+            #100818
+        );
+}
+
+.history-section {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #21102e,
+            #09050d 70%
+        );
+}
+
+.carousel-section {
+
+    background: #07040a;
+}
+
+.traditions-section {
+
+    background: #0d0713;
+}
+
+.gallery-section {
+
+    background: #08050c;
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.section-title {
+
+    margin-bottom: 50px;
+}
+
+.section-label {
+
+    color: #ff7518;
+
+    letter-spacing: 4px;
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+}
+
+.section-title h2,
+.section h2 {
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    font-weight: 800;
+
+    margin-top: 15px;
+}
+
+.section-title h2 span,
+.section h2 span {
+
+    color: #ff7518;
+}
+
+.section-title p {
+
+    color: #aaa;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+
+.image-frame {
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #442055;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.image-frame img {
+
+    width: 100%;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+.image-frame:hover img {
+
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: #4d1a70;
+}
+
+.timeline-item {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+}
+
+.timeline-number {
+
+    min-width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #ff7518;
+
+    color: #160a04;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 20px rgba(255, 117, 24, 0.35);
+}
+
+.timeline-content {
+
+    background: #12091a;
+
+    border: 1px solid #321743;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    flex: 1;
+
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+
+    transform: translateX(8px);
+
+    border-color: #ff7518;
+}
+
+.timeline-content h3 {
+
+    color: #ff7518;
+
+    margin-bottom: 15px;
+}
+
+.timeline-content p {
+
+    color: #aaa;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CAROUSEL
+===================================================== */
+
+.carousel-halloween {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-halloween img {
+
+    height: 600px;
+
+    object-fit: cover;
+
+    filter: brightness(0.55);
+
+    transition: 0.5s;
+}
+
+.carousel-halloween:hover img {
+
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+
+    bottom: 15%;
+
+    text-shadow:
+        0 3px 10px #000;
+}
+
+.carousel-caption h3 {
+
+    font-size: 2.5rem;
+
+    color: #ff7518;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card-halloween {
+
+    background:
+        linear-gradient(
+            145deg,
+            #171020,
+            #0c0711
+        );
+
+    border: 1px solid #342044;
+
+    border-radius: 15px;
+
+    color: white;
+
+    height: 100%;
+
+    text-align: center;
+
+    padding-top: 30px;
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+.card-halloween:hover {
+
+    transform: translateY(-10px);
+
+    border-color: #ff7518;
+
+    box-shadow:
+        0 15px 40px rgba(255, 117, 24, 0.15);
+}
+
+.symbol-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    transition: 0.4s;
+}
+
+.card-halloween:hover .symbol-icon {
+
+    transform:
+        scale(1.15)
+        rotate(5deg);
+}
+
+.card-title {
+
+    color: #ff7518;
+
+    margin-top: 15px;
+}
+
+.card-text {
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+.badge-purple {
+
+    background: #6f2dbd;
+}
+
+
+/* =====================================================
+   TRADIÇÕES
+===================================================== */
+
+.tradition {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    background: #130a1c;
+
+    border-left: 3px solid #ff7518;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.tradition:hover {
+
+    transform: translateX(8px);
+
+    background: #1a0d25;
+}
+
+.tradition > span {
+
+    font-size: 35px;
+}
+
+.tradition h3 {
+
+    color: #ff7518;
+
+    font-size: 1.2rem;
+}
+
+.tradition p {
+
+    color: #aaa;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.gallery-item {
+
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    border: 1px solid #30173f;
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.1);
+
+    filter: brightness(0.5);
+}
+
+.gallery-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    color: white;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transition: 0.4s;
+}
+
+.gallery-item:hover .gallery-overlay {
+
+    opacity: 1;
+}
+
+.gallery-overlay i {
+
+    color: #ff7518;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   ACCORDION
+===================================================== */
+
+.accordion-halloween .accordion-item {
+
+    background: #12091a;
+
+    border: 1px solid #382047;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.accordion-halloween .accordion-button {
+
+    background: #160b20;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.accordion-halloween .accordion-button:not(.collapsed) {
+
+    background: #281037;
+
+    color: #ff7518;
+
+    box-shadow: none;
+}
+
+.accordion-halloween .accordion-button::after {
+
+    filter: invert(1);
+}
+
+.accordion-halloween .accordion-body {
+
+    color: #aaa;
+
+    line-height: 1.8;
+
+    background: #100816;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final-section {
+
+    background:
+        radial-gradient(
+            circle,
+            #321442,
+            #08050c 65%
+        );
+
+    text-align: center;
+}
+
+.final-section h2 {
+
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.final-section p {
+
+    color: #aaa;
+
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal-halloween {
+
+    background: #12091a;
+
+    color: white;
+
+    border: 1px solid #6f2dbd;
+}
+
+.modal-halloween .modal-header {
+
+    border-bottom: 1px solid #342044;
+}
+
+.modal-halloween .modal-title {
+
+    color: #ff7518;
+}
+
+.modal-halloween .modal-body {
+
+    padding: 40px;
+}
+
+.modal-icon {
+
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    background: #050307;
+
+    padding: 50px 0;
+
+    border-top: 1px solid #26132f;
+}
+
+.footer-logo {
+
+    color: #ff7518;
+
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.footer p {
+
+    color: #777;
+
+    margin: 10px 0 25px;
+}
+
+.footer hr {
+
+    border-color: #29202d;
+}
+
+.footer small {
+
+    color: #666;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES DE ENTRADA
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   ANIMAÇÃO AO ROLAR
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.ativo {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+
+        font-size: 3.5rem;
+
+        letter-spacing: 2px;
+    }
+
+    .lua {
+
+        width: 90px;
+
+        height: 90px;
+
+        top: 13%;
+
+        right: 5%;
+    }
+
+    .carousel-halloween img {
+
+        height: 400px;
+    }
+
+    .carousel-caption h3 {
+
+        font-size: 1.5rem;
+    }
+
+    .timeline::before {
+
+        display: none;
+    }
+
+    .timeline-item {
+
+        gap: 15px;
+    }
+
+    .timeline-number {
+
+        min-width: 45px;
+
+        height: 45px;
+
+        font-size: 0.8rem;
+    }
+
+    .section {
+
+        padding: 80px 0;
+    }
+
+}
